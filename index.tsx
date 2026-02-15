@@ -1,20 +1,9 @@
-/*
- * Vencord, a modification for Discord's desktop app
- * Copyright (c) 2024 Vendicated and contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
- */
+export const pluginInfo = {
+    id: "performanceModeToggle",
+    name: "Performance Mode Toggle",
+    description: "Adds a performance mode toggle button that optimizes Discord settings for better performance",
+    color: "#7289da"
+};
 
 import "./style.css";
 
@@ -201,12 +190,10 @@ async function restoreOriginalSettings() {
 
 import { Logger } from "@utils/Logger";
 
-const pluginId = "performanceModeToggle";
-const pluginName = "Performance Mode Toggle";
-const logger = new Logger(pluginName, "#7289da");
+const logger = new Logger(pluginInfo.name, pluginInfo.color);
 
 export default definePlugin({
-    name: pluginName,
+    name: "Performance Mode Toggle",
     description:
         "Adds a performance mode toggle button that optimizes Discord settings for better performance",
     authors: [
