@@ -46,13 +46,13 @@ let AutoPlayGifs: any = null;
 try {
     AnimatedEmoji = getUserSettingLazy("accessibility", "animatedEmoji");
 } catch (e) {
-    console.log("PerformanceModeToggle: animatedEmoji setting not available");
+    logger.warn("PerformanceModeToggle: animatedEmoji setting not available");
 }
 
 try {
     AutoPlayGifs = getUserSettingLazy("accessibility", "autoPlayGifs");
 } catch (e) {
-    console.log("PerformanceModeToggle: autoPlayGifs setting not available");
+    logger.warn("PerformanceModeToggle: autoPlayGifs setting not available");
 }
 
 const settings = definePluginSettings({
@@ -199,8 +199,14 @@ async function restoreOriginalSettings() {
     document.body.classList.remove("vc-performance-mode-enabled");
 }
 
+import { Logger } from "@utils/Logger";
+
+const pluginId = "performanceModeToggle";
+const pluginName = "Performance Mode Toggle";
+const logger = new Logger(pluginName, "#7289da");
+
 export default definePlugin({
-    name: "Blu Performance Mode Toggle",
+    name: pluginName,
     description:
         "Adds a performance mode toggle button that optimizes Discord settings for better performance",
     authors: [

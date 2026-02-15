@@ -1,7 +1,7 @@
 {
-    "name": "blu-performancemodetoggle",
+    "name": "performanceModeToggle",
     "version": "1.0.0",
-    "description": "Adds a performance mode toggle button that optimizes Discord settings for better performance",
+    "description": "Performance Mode Toggle",
     "main": "index.tsx",
     "scripts": {
         "build": "echo 'No build step required for Vencord user plugins'",
