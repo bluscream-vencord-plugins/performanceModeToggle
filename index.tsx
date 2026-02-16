@@ -15,18 +15,8 @@ import { Logger } from "@utils/Logger";
 import { settings } from "./settings";
 // endregion Imports
 
-// region PluginInfo
-export const pluginInfo = {
-    id: "performanceModeToggle",
-    name: "PerformanceMode",
-    description: "Adds a performance mode toggle button that optimizes Discord settings for better performance",
-    color: "#7289da",
-    authors: [
-        { name: "Bluscream", id: 467777925790564352n },
-        { name: "Assistant", id: 0n }
-    ],
-};
-// endregion PluginInfo
+import { pluginInfo } from "./info";
+export { pluginInfo };
 
 // region Variables
 const logger = new Logger(pluginInfo.id, pluginInfo.color);
